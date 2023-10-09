@@ -6,23 +6,23 @@
     <div mt-4 text="base gray-500">
       收集一些有用的内容
     </div>
-    <h2 class="flex items-center mt-4">
+    <h2 class="mt-4 flex items-center">
       <span flex-1>项目目录</span>
-      <div class="op-50 ml-2 hover:op-100 transition-opacity cursor-pointer">
+      <div class="ml-2 cursor-pointer op-50 transition-opacity hover:op-100">
         <a target="_blank" href="https://github.com/dxhuii">
-          <div class="m-2 i-ri-arrow-right-up-line" />
+          <div class="i-ri-arrow-right-up-line m-2" />
         </a>
       </div>
     </h2>
-    <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 mt-4">
+    <div class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
       <a
-        class="px-4 py-3 rounded-md bg-gray-100 transition-colors decoration-none hover:bg-gray-200 dark:bg-gray-50/10 dark:hover:bg-gray-50/20"
+        class="rounded-md bg-gray-100 px-4 py-3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
         target="_blank" href="https://quickref.cms.im/"
       >
-        <div class="flex h-full items-center justify-center">
+        <div class="h-full flex items-center justify-center">
           <div flex-1>
             <div font-medium leading-relaxed>备忘清单</div>
-            <div op-50 font-normal text-sm>开发人员分享快速参考备忘清单</div>
+            <div text-sm font-normal op-50>开发人员分享快速参考备忘清单</div>
           </div>
           <div ml-4 text-4xl op-75>
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="1em" width="1em">
@@ -34,13 +34,13 @@
         </div>
       </a>
       <a
-        class="px-4 py-3 rounded-md bg-gray-100 transition-colors decoration-none hover:bg-gray-200 dark:bg-gray-50/10 dark:hover:bg-gray-50/20"
+        class="rounded-md bg-gray-100 px-4 py-3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
         target="_blank" href="https://github.com/dxhuii/delWeibo"
       >
-        <div class="flex h-full items-center justify-center">
+        <div class="h-full flex items-center justify-center">
           <div flex-1>
             <div font-medium leading-relaxed>批量删除微博博文</div>
-            <div op-50 font-normal text-sm>批量删除新浪微博的小工具</div>
+            <div text-sm font-normal op-50>批量删除新浪微博的小工具</div>
           </div>
           <div ml-4 text-4xl op-75>
             <div class="i-twemoji-delivery-truck" />

@@ -6,31 +6,38 @@ import {
   presetUno,
   presetWebFonts,
   transformerDirectives,
-  transformerVariantGroup,
+  transformerVariantGroup
 } from 'unocss'
 
 export default defineConfig({
-  shortcuts: [
-    ['btn', 'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600'],
-  ],
+  shortcuts: {
+    'bg-base': 'bg-white dark:bg-#111',
+    'bg-secondary': 'bg-gray:5',
+    'bg-active': 'bg-gray:10',
+    'border-base': 'border-#aaa3',
+    'border-box': 'border border-base rounded',
+    'text-button': 'border-box bg-secondary hover:bg-active px3 py1 flex gap-1 items-center justify-center',
+    'icon-button': 'border-box bg-secondary hover:bg-active p1',
+    'icon-button-sm': 'icon-button p0.5 text-sm',
+    'action-button': 'border border-base rounded flex gap-2 items-center px2 py1 text-sm op75 hover:op100 hover:bg-secondary'
+  },
   presets: [
     presetUno(),
     presetAttributify(),
     presetIcons({
-      scale: 1.2,
+      scale: 1.2
     }),
     presetTypography(),
     presetWebFonts({
       fonts: {
         sans: 'DM Sans',
         serif: 'DM Serif Display',
-        mono: 'DM Mono',
-      },
-    }),
+        mono: 'DM Mono'
+      }
+    })
   ],
   transformers: [
     transformerDirectives(),
-    transformerVariantGroup(),
-  ],
+    transformerVariantGroup()
+  ]
 })
