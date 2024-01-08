@@ -91,8 +91,8 @@ definePageMeta({
   flex: 1;
   text-align: center;
 }
-@media print{
-  .print{
+@media print {
+  .print {
     visibility: hidden !important;
   }
 }

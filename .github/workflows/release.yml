@@ -1,5 +1,8 @@
 name: Release
 
+permissions:
+  contents: write
+
 on:
   push:
     tags:
@@ -8,15 +11,22 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [lts/*]
     steps:
-      - uses: actions/checkout@v3
+      - name: 🔀 Checkout Git Source
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - name: 🚀 Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: lts/*
 
-      - run: npx changelogithub
+      - name: 🔖 Release
+        run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

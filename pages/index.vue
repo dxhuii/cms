@@ -47,6 +47,20 @@
           </div>
         </div>
       </a>
+      <a
+        class="rounded-md bg-gray-100 px-4 py-3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
+        target="_blank" href="https://npm-stat.link/"
+      >
+        <div class="h-full flex items-center justify-center">
+          <div flex-1>
+            <div font-medium leading-relaxed>NPM下载统计</div>
+            <div text-sm font-normal op-50>查看使用包的各个版本的NPM下载统计</div>
+          </div>
+          <div ml-4 text-4xl op-75>
+            <div class="i-twemoji-chart-increasing" />
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </template>

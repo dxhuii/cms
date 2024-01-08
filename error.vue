@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   error: Object
 })
@@ -16,14 +16,14 @@ function handleError() {
   <NuxtLayout>
     <div flex="~ col" h-screen items-center justify-center gap4 text-center>
       <div text-3xl>
-        {{ is404 ? 'This page could not be found' : 'An error occurred' }}
+        {{ is404 ? '无法找到此页面' : '发生了一个错误' }}
       </div>
       <div text-xl op50>
-        Looks like you've followed a broken link or entered a URL that doesn't exist on this site.
+        看起来你跟踪了一个错误的链接，或者输入了一个在本网站不存在的URL。
       </div>
       <pre v-if="isDev">{{ error }}</pre>
       <button n-link border rounded px4 py1 @click="handleError">
-        Go Back
+        返回首页
       </button>
     </div>
   </NuxtLayout>

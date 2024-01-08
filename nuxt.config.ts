@@ -12,12 +12,12 @@ export default defineNuxtConfig({
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
     payloadExtraction: false,
-    inlineSSRStyles: false,
     renderJsonPayloads: true,
     typedPages: true
   },
   css: [
-    '@unocss/reset/tailwind.css'
+    '@unocss/reset/tailwind.css',
+    '~/styles/global.css'
   ],
   app: {
     head: {

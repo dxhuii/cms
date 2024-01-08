@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     branches:
       - main
@@ -12,44 +11,48 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Install pnpm
+    steps:
+      - name: 🔀 Checkout Git Source
+        uses: actions/checkout@v4
+
+      - name: 📦 Install pnpm
         uses: pnpm/action-setup@v2
 
-      - name: Set node
-        uses: actions/setup-node@v3
+      - name: 🚀 Use Node.js lts/*
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
 
-      - name: Setup
-        run: npm i -g @antfu/ni
+      - name: 📦 Install Dependencies
+        run: pnpm i
 
-      - name: Install
-        run: nci
+      - name: ✅ Lint
+        run: pnpm lint
 
-      - name: Lint
-        run: nr lint
-
-  typecheck:
+  buildWeb:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Install pnpm
+    steps:
+      - name: 🔀 Checkout Git Source
+        uses: actions/checkout@v4
+
+      - name: 📦 Install pnpm
         uses: pnpm/action-setup@v2
 
-      - name: Set node
-        uses: actions/setup-node@v3
+      - name: 🚀 Use Node.js lts/*
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: lts/*
 
-      - name: Setup
-        run: npm i -g @antfu/ni
+      - name: 📦 Install Dependencies
+        run: pnpm i
 
-      - name: Install
-        run: nci
+      - name: 🚧 Set up project
+        run: pnpm generate
 
-      - name: Typecheck
-        run: nr typecheck
+      - name: 🚧 Build
+        run: pnpm build
+
+      - name: 💪 Typecheck
+        run: pnpm typecheck

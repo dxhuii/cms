@@ -1,5 +1,5 @@
-import antfu from '@antfu/eslint-config'
-import unocss from '@unocss/eslint-plugin'
+// @ts-check
 import dxhuii from '@dxhuii/eslint-config'
+import antfu from '@antfu/eslint-config'
 
-export default antfu({}, unocss.configs.flat, dxhuii({ react: false }))
+export default antfu({ react: true, unocss: true, formatters: true }, dxhuii())
