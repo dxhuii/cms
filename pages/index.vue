@@ -1,66 +1,82 @@
+<script setup lang="ts">
+const list = [{
+  title: '备忘清单',
+  href: 'https://quickref.cms.im/',
+  icon: 'i-twemoji:blue-book',
+  desc: '开发人员分享快速参考备忘清单',
+  target: '_blank'
+},
+{
+  title: 'JS框架对比',
+  href: 'https://component-party.cms.im/',
+  icon: 'i-twemoji:party-popper',
+  desc: 'JavaScript框架语法特性对比',
+  target: '_blank'
+},
+{
+  title: 'IT工具箱',
+  href: 'https://tools.cms.im/',
+  icon: 'i-twemoji:toolbox',
+  desc: '助力开发人员和 IT 工作者',
+  target: '_blank'
+},
+{
+  title: 'NPM下载统计',
+  href: 'https://npm-stat.link/',
+  icon: 'i-twemoji-chart-increasing',
+  desc: '查看使用包的各个版本的NPM下载统计',
+  target: '_blank'
+},
+{
+  title: 'RGB转十六进制',
+  href: '/rgb2hex',
+  icon: 'i-twemoji:currency-exchange',
+  desc: 'RGB颜色值与十六进制颜色码转换工具'
+},
+{
+  title: '批量删除微博博文',
+  href: 'https://github.com/dxhuii/delWeibo',
+  icon: 'i-twemoji-delivery-truck',
+  desc: '批量删除新浪微博的小工具',
+  target: '_blank'
+}
+]
+</script>
+
 <template>
   <div>
-    <h1 text="3xl">
-      内容清单
-    </h1>
-    <div mt-4 text="base gray-500">
-      收集一些有用的内容
-    </div>
-    <h2 class="mt-4 flex items-center">
-      <span flex-1>项目目录</span>
-      <div class="ml-2 cursor-pointer op-50 transition-opacity hover:op-100">
-        <a target="_blank" href="https://github.com/dxhuii">
-          <div class="i-ri-arrow-right-up-line m-2" />
-        </a>
+    <div flex="~ col" items-center>
+      <h1 text="2xl">
+        内容清单 <sup text="base" bg-card border-base top--3 border rounded px1 text-3 tracking-0.5 style="">CMS.IM</sup>
+      </h1>
+      <div mt-4 text="base gray-500">
+        收集一些有用的内容
       </div>
+    </div>
+    <h2 class="mt4 flex">
+      项目目录
     </h2>
-    <div class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
-      <a
-        class="rounded-md bg-gray-100 px-4 py-3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
-        target="_blank" href="https://quickref.cms.im/"
+    <div class="grid grid-cols-1 mt4 gap4 sm:grid-cols-2 md:sm:grid-cols-4">
+      <NuxtLink
+        v-for="item in list" :key="item.href"
+        :to="item.href"
+        class="rounded-md bg-gray-100 px4 py3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
+        :target="item.target"
       >
         <div class="h-full flex items-center justify-center">
           <div flex-1>
-            <div font-medium leading-relaxed>备忘清单</div>
-            <div text-sm font-normal op-50>开发人员分享快速参考备忘清单</div>
+            <div font-medium leading-relaxed>
+              {{ item.title }}
+            </div>
+            <div text-sm font-normal op-50>
+              {{ item.desc }}
+            </div>
           </div>
           <div ml-4 text-4xl op-75>
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="1em" width="1em">
-              <path d="m21.66 10.44-.98 4.18c-.84 3.61-2.5 5.07-5.62 4.77-.5-.04-1.04-.13-1.62-.27l-1.68-.4c-4.17-.99-5.46-3.05-4.48-7.23l.98-4.19c.2-.85.44-1.59.74-2.2 1.17-2.42 3.16-3.07 6.5-2.28l1.67.39c4.19.98 5.47 3.05 4.49 7.23Z" fill="#c9d1d9" />
-              <path d="M15.06 19.39c-.62.42-1.4.77-2.35 1.08l-1.58.52c-3.97 1.28-6.06.21-7.35-3.76L2.5 13.28c-1.28-3.97-.22-6.07 3.75-7.35l1.58-.52c.41-.13.8-.24 1.17-.31-.3.61-.54 1.35-.74 2.2l-.98 4.19c-.98 4.18.31 6.24 4.48 7.23l1.68.4c.58.14 1.12.23 1.62.27Zm2.43-8.88c-.06 0-.12-.01-.19-.02l-4.85-1.23a.75.75 0 0 1 .37-1.45l4.85 1.23a.748.748 0 0 1-.18 1.47Z" fill="#228e6c" />
-              <path d="M14.56 13.89c-.06 0-.12-.01-.19-.02l-2.91-.74a.75.75 0 0 1 .37-1.45l2.91.74c.4.1.64.51.54.91-.08.34-.38.56-.72.56Z" fill="#228e6c" />
-            </svg>
+            <div :class="item.icon" />
           </div>
         </div>
-      </a>
-      <a
-        class="rounded-md bg-gray-100 px-4 py-3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
-        target="_blank" href="https://github.com/dxhuii/delWeibo"
-      >
-        <div class="h-full flex items-center justify-center">
-          <div flex-1>
-            <div font-medium leading-relaxed>批量删除微博博文</div>
-            <div text-sm font-normal op-50>批量删除新浪微博的小工具</div>
-          </div>
-          <div ml-4 text-4xl op-75>
-            <div class="i-twemoji-delivery-truck" />
-          </div>
-        </div>
-      </a>
-      <a
-        class="rounded-md bg-gray-100 px-4 py-3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
-        target="_blank" href="https://npm-stat.link/"
-      >
-        <div class="h-full flex items-center justify-center">
-          <div flex-1>
-            <div font-medium leading-relaxed>NPM下载统计</div>
-            <div text-sm font-normal op-50>查看使用包的各个版本的NPM下载统计</div>
-          </div>
-          <div ml-4 text-4xl op-75>
-            <div class="i-twemoji-chart-increasing" />
-          </div>
-        </div>
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>
