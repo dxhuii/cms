@@ -2,7 +2,7 @@
 import dxhuii from '@dxhuii/eslint-config'
 import antfu from '@antfu/eslint-config'
 
-export default antfu({vue: true, unocss: true, formatters: true, typescript: true }, dxhuii({}), {
+export default antfu({ vue: true, unocss: true, formatters: true, typescript: true }, dxhuii(), {
   ignores: [
     'dist',
     '.umi',

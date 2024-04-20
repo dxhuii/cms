@@ -39,6 +39,13 @@ const list = [{
   icon: 'i-twemoji-delivery-truck',
   desc: '批量删除新浪微博的小工具',
   target: '_blank'
+},
+{
+  title: 'Hello Nav!',
+  href: 'https://hello-nav.cms.im/',
+  icon: 'https://hello-nav.cms.im/favicon/favicon-192.png',
+  desc: '面向开发人员的导航',
+  target: '_blank'
 }
 ]
 </script>
@@ -73,7 +80,8 @@ const list = [{
             </div>
           </div>
           <div ml-4 text-4xl op-75>
-            <div :class="item.icon" />
+            <img v-if="item.icon.includes('https')" w10 h10 :src="item.icon" :alt="item.title">
+            <div v-else :class="item.icon" />
           </div>
         </div>
       </NuxtLink>
