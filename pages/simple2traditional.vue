@@ -13,8 +13,8 @@ useHead({
 
 const type = ref('s2t')
 const isEnhance = ref(false)
-const meta = ref('共 0 字，耗时 0ms')
 const output = ref('')
+const time = ref(0)
 
 function toggleType() {
   type.value = type.value === 's2t' ? 't2s' : 's2t'
@@ -29,11 +29,10 @@ function convert() {
   const text = input.value
   const begin = performance.now()
   const result = type.value === 's2t' ? toTraditional(text, isEnhance.value) : toSimplified(text, isEnhance.value)
-  const time = performance.now() - begin
 
   output.value = result.replace(/\n/g, '<br>')
 
-  meta.value = `共 ${text.length} 字，耗时 ${time.toFixed(2)}ms`
+  time.value = Number.parseFloat((performance.now() - begin).toFixed(2))
 }
 
 async function paste() {
@@ -70,7 +69,7 @@ async function paste() {
       <button type="button" @click="paste">
         粘贴
       </button>
-      <button type="button" @click="input = ''">
+      <button type="button" @click="input = '';output = ''; time = 0">
         清空
       </button>
     </header>
@@ -79,7 +78,7 @@ async function paste() {
       <p id="output" dark:text-black v-html="output" />
     </div>
     <p text-sm pt4 pl3 pb16>
-      {{ meta }}
+      共 {{ input?.length || 0 }} 字，耗时 {{ time }}ms
     </p>
   </main>
 </template>
