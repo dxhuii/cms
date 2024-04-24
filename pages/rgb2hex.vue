@@ -10,26 +10,6 @@ const hex = ref('#ffb400')
 const h = ref('#cc00ff')
 const rgb = ref([204, 0, 255])
 
-// ------- //
-// rgb2hex //
-// ------- //
-
-// one liner to convert rgb color (provided as a string) to hex
-// const rgb2hex = rgb => `#${rgb.replace(/[^0-9,]/g, "").split(",").map(n => (n|0).toString(16).padStart(2, '0')).join("")}`;
-
-// straight from array
-// const rgb2hexArr = rgb => `#${rgb.map(n => (n|0).toString(16).padStart(2, '0')).join("")}`;
-
-// ------- //
-// hex2rgb //
-// ------- //
-
-// one liner to convert hex color to rgb (as a string)
-// const hex2rgb = hex => `rgb(${hex.replace("#", "").match(/../g).map(n => parseInt(n, 16)).join(", ")})`;
-
-// to array
-// const hex2rgbArr = hex => hex.replace("#", "").match(/../g).map(n => parseInt(n, 16));
-
 /**
  * rgb转16进制
  */

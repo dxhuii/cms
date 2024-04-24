@@ -19,6 +19,9 @@
     "typecheck": "vue-tsc --noEmit",
     "release": "bumpp"
   },
+  "dependencies": {
+    "chinese-simple2traditional": "^2.1.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "2.14.0",
     "@dxhuii/eslint-config": "^2.1.0",

@@ -46,6 +46,26 @@ const list = [{
   icon: 'https://hello-nav.cms.im/favicon/favicon-192.png',
   desc: '面向开发人员的导航',
   target: '_blank'
+},
+{
+  title: '简繁转换',
+  href: '/simple2traditional',
+  icon: 'i-twemoji:cyclone',
+  desc: '在线繁体字转换工具'
+},
+{
+  title: 'GitHub 关注排行榜',
+  href: 'https://github-rank.cms.im/',
+  icon: 'https://github.githubassets.com/favicon.ico',
+  desc: 'GitHub 全球用户的关注排行榜',
+  target: '_blank'
+},
+{
+  title: '程序代码图片',
+  href: 'https://code-image.cms.im',
+  icon: 'https://code-image.cms.im/favicon.ico',
+  desc: '可以把程序代码生成图片的网站',
+  target: '_blank'
 }
 ]
 </script>
@@ -60,14 +80,14 @@ const list = [{
         收集一些有用的内容
       </div>
     </div>
-    <h2 class="mt4 flex">
+    <h2 class="mt-4 flex">
       项目目录
     </h2>
-    <div class="grid grid-cols-1 mt4 gap4 sm:grid-cols-2 md:sm:grid-cols-4">
+    <div class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2 md:sm:grid-cols-4">
       <NuxtLink
         v-for="item in list" :key="item.href"
         :to="item.href"
-        class="rounded-md bg-gray-100 px4 py3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
+        class="rounded-md bg-gray-100 px-4 py-3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
         :target="item.target"
       >
         <div class="h-full flex items-center justify-center">
