@@ -35,7 +35,7 @@ function hex2rgb() {
         <input v-model="r2h.r" type="number" w-20 border border-base px2>
         <input v-model="r2h.g" type="number" w-20 border border-base px2>
         <input v-model="r2h.b" type="number" w-20 border border-base px2>
-        <button flex items-center justify-center rounded-full btn-primary @click="rgb2hex">
+        <button btn-primary flex items-center justify-center rounded-full @click="rgb2hex">
           转换
         </button>
       </div>
@@ -46,7 +46,7 @@ function hex2rgb() {
     </h1>
     <div flex="~ gap4" mt4>
       <input v-model="h" type="text" border border-base px2>
-      <button flex items-center justify-center rounded-full btn-primary @click="hex2rgb">
+      <button btn-primary flex items-center justify-center rounded-full @click="hex2rgb">
         转换
       </button>
     </div>

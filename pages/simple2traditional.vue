@@ -28,7 +28,7 @@ function toggleEnhance() {
 function convert() {
   const text = input.value
   const begin = performance.now()
-  const result = type.value === 's2t' ? toTraditional(text, isEnhance.value) : toSimplified(text, isEnhance.value)
+  const result = type.value === 't2s' ? toTraditional(text, isEnhance.value) : toSimplified(text, isEnhance.value)
 
   output.value = result.replace(/\n/g, '<br>')
 
@@ -43,14 +43,14 @@ async function paste() {
 </script>
 
 <template>
-  <main w-full max-w-7xl mt16 mx-auto flex="~ col" justify-center items-center>
-    <h1 text-4xl mb16 font-bold>
+  <main flex="~ col" mx-auto mt16 max-w-7xl w-full items-center justify-center>
+    <h1 mb16 text-4xl font-bold>
       在线繁体字转换工具
     </h1>
-    <header flex gap12 items-center text-base>
+    <header flex items-center gap12 text-base>
       <p flex items-center gap4 class="langs" :class="{ reverse: type === 's2t' }">
         <span>简体</span>
-        <button id="toggle" type="button" border-none outline-0 bg-transparent text-5xl h12 flex items-center text-gray-900 dark:text-gray-200 cursor-pointer @click="toggleType">
+        <button id="toggle" type="button" h12 flex cursor-pointer items-center border-none bg-transparent text-5xl text-gray-900 outline-0 dark:text-gray-200 @click="toggleType">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
             <path fill="currentColor" d="M16.5 17.5h-9a5.5 5.5 0 1 1 0-11h9a5.5 5.5 0 1 1 0 11" opacity="0.5" />
             <circle cx="7.5" cy="12" r="2.5" fill="currentColor" />
@@ -73,11 +73,11 @@ async function paste() {
         清空
       </button>
     </header>
-    <div class="box border-[#e6eeff] border-2 border-solid" w-full flex rounded-lg of-hidden relative>
+    <div class="box border-2 border-[#e6eeff] border-solid" relative w-full flex of-hidden rounded-lg>
       <textarea id="input" ref="textarea" v-model="input" resize-none dark:text-black @input="convert" />
       <p id="output" dark:text-black v-html="output" />
     </div>
-    <p text-sm pt4 pl3 pb16>
+    <p pb16 pl3 pt4 text-sm>
       共 {{ input?.length || 0 }} 字，耗时 {{ time }}ms
     </p>
   </main>

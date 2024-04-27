@@ -74,7 +74,7 @@ const list = [{
   <div>
     <div flex="~ col" items-center>
       <h1 text="2xl">
-        内容清单 <sup text="base" bg-card border-base top--3 border rounded px1 text-3 tracking-0.5 style="">CMS.IM</sup>
+        内容清单 <sup text="base" bg-card top--3 border border-base rounded px1 text-3 tracking-0.5 style="">CMS.IM</sup>
       </h1>
       <div mt-4 text="base gray-500">
         收集一些有用的内容
@@ -100,7 +100,7 @@ const list = [{
             </div>
           </div>
           <div ml-4 text-4xl op-75>
-            <img v-if="item.icon.includes('https')" w10 h10 :src="item.icon" :alt="item.title">
+            <img v-if="item.icon.includes('https')" h10 w10 :src="item.icon" :alt="item.title">
             <div v-else :class="item.icon" />
           </div>
         </div>
