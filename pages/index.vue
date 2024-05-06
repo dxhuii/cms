@@ -66,8 +66,21 @@ const list = [{
   icon: 'https://code-image.cms.im/favicon.ico',
   desc: '可以把程序代码生成图片的网站',
   target: '_blank'
-}
-]
+},
+{
+  title: '智能的Webp、JPEG、PNG图片压缩工具',
+  href: 'https://free.tinypng.site/',
+  icon: 'https://free.tinypng.site/_next/image?url=%2Flogo.png&w=3840&q=75',
+  desc: '完全免费且永久无任何限制！',
+  target: '_blank'
+},
+{
+  title: 'IconSax icon list',
+  href: 'https://iconsax-icon-list.cms.im/',
+  icon: 'https://iconsax.io/logo-vuesax.svg',
+  desc: 'IconSax 图标展示列表，支持搜索',
+  target: '_blank'
+}]
 </script>
 
 <template>
