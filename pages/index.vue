@@ -69,9 +69,9 @@ const list = [{
 },
 {
   title: '智能的Webp、JPEG、PNG图片压缩工具',
-  href: 'https://free.tinypng.site/',
-  icon: 'https://free.tinypng.site/_next/image?url=%2Flogo.png&w=3840&q=75',
-  desc: '完全免费且永久无任何限制！',
+  href: 'https://tinypng.com/',
+  icon: 'https://tinypng.com/images/apple-touch-icon.png',
+  desc: '一次最多20张，文件最大5MB',
   target: '_blank'
 },
 {
