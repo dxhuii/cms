@@ -80,11 +80,18 @@ const list = [{
   icon: 'https://iconsax.io/logo-vuesax.svg',
   desc: 'IconSax 图标展示列表，支持搜索',
   target: '_blank'
+},
+{
+  title: 'ArtPlayer在线播放器',
+  href: 'https://player.cms.im/',
+  icon: 'https://m3u8-player.com/favicon.ico',
+  desc: 'ArtPlayer在线播放器，支持hls、flv在线弹幕',
+  target: '_blank'
 }]
 </script>
 
 <template>
-  <div>
+  <div class="px-10 py-20">
     <div flex="~ col" items-center>
       <h1 text="2xl">
         内容清单 <sup text="base" bg-card top--3 border border-base rounded px1 text-3 tracking-0.5 style="">CMS.IM</sup>
