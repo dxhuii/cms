@@ -126,5 +126,11 @@ const list = [{
         </div>
       </NuxtLink>
     </div>
+    <h2 class="mt-4 flex">
+      友情链接
+    </h2>
+    <div mt4 text-sm>
+      <a href="https://www.item-china.cn/" target="_blank" hover:text-lightBlue>工业铝型材</a>
+    </div>
   </div>
 </template>
