@@ -55,7 +55,7 @@ const imgArr = ref([
     </h2>
     <div my2>
       <div v-for="item in imgArr" :key="item.url" mb2>
-        <img mb2 :src="item.url" w-80 alt="">{{ item.name }} <a text-blue-6 href="item.url">{{ item.url }}</a>
+        <img mb2 :src="item.url" w-80 alt="">{{ item.name }} <a text-blue-6 :href="item.url">{{ item.url }}</a>
       </div>
     </div>
   </main>
