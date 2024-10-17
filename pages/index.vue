@@ -87,6 +87,12 @@ const list = [{
   icon: 'https://m3u8-player.com/favicon.ico',
   desc: 'ArtPlayer在线播放器，支持hls、flv在线弹幕',
   target: '_blank'
+},
+{
+  title: '简易百度图床',
+  href: '/image',
+  icon: 'https://www.baidu.com/favicon.ico',
+  desc: '简易百度图床上传必看'
 }]
 </script>
 
@@ -120,17 +126,11 @@ const list = [{
             </div>
           </div>
           <div ml-4 text-4xl op-75>
-            <img v-if="item.icon.includes('https')" h10 w10 :src="item.icon" :alt="item.title">
+            <img v-if="item.icon.includes('https')" w10 :src="item.icon" :alt="item.title">
             <div v-else :class="item.icon" />
           </div>
         </div>
       </NuxtLink>
-    </div>
-    <h2 class="mt-4 flex">
-      友情链接
-    </h2>
-    <div mt4 text-sm>
-      <a href="https://www.item-china.cn/" target="_blank" hover:text-lightBlue>工业铝型材</a>
     </div>
   </div>
 </template>

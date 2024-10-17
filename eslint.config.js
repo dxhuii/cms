@@ -1,19 +1,12 @@
 // @ts-check
-import dxhuii from '@dxhuii/eslint-config'
 import antfu from '@antfu/eslint-config'
+import dxhuii from '@dxhuii/eslint-config'
 
-export default antfu({ vue: true, unocss: true, formatters: true, typescript: true }, dxhuii(), {
-  ignores: [
-    'dist',
-    '.umi',
-    'mock',
-    'node_modules',
-    'coverage',
-    'scripts',
-    'config',
-    '.history',
-    '/lambda/',
-    'public',
-    '**/*.json'
-  ]
-})
+export default antfu({
+  unocss: true, formatters: true, typescript: true, vue: true, markdown: true, stylistic: true,
+  rules: {
+    'ts/no-unused-expressions': 'off',
+    'import/order': 'off',
+    'sort-imports': 'off'
+  }
+}, dxhuii())
