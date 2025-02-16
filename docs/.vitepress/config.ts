@@ -73,7 +73,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: `文档中心 - cms.im v${version}`,
+      message: `内容管理 - cms.im v${version}`,
       copyright: 'Copyright © 2025-PRESENT Dxh.me',
     },
   },
@@ -88,5 +88,7 @@ export default defineConfig({
     // ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     // ['meta', { name: 'twitter:image', content: '' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
+    ['script', { 'src': 'https://d.vv.chat/script.js', 'defer': 'true', 'data-website-id': '691ab4f0-9191-40bb-8b3c-da5d2ffb3ab1' }],
+    ['meta', { name: 'keywords', content: 'cms.im,文档,开源,优秀,收集,cms,文档中心,开源文档,内容管理' }],
   ],
 })
