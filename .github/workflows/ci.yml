@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
   pull_request:
     branches:
       - main
@@ -11,48 +12,42 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🔀 Checkout Git Source
-        uses: actions/checkout@v4
-
-      - name: 📦 Install pnpm
-        uses: pnpm/action-setup@v2
-
-      - name: 🚀 Use Node.js lts/*
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
         with:
           node-version: lts/*
+          cache: pnpm
 
-      - name: 📦 Install Dependencies
-        run: pnpm i
+      - run: pnpm i -g @antfu/ni
+      - run: nci
+      - run: nr lint
+      - run: nr typecheck
 
-      - name: ✅ Lint
-        run: pnpm lint
+  test:
+    runs-on: ${{ matrix.os }}
 
-  buildWeb:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [lts/*]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
 
     steps:
-      - name: 🔀 Checkout Git Source
-        uses: actions/checkout@v4
-
-      - name: 📦 Install pnpm
-        uses: pnpm/action-setup@v2
-
-      - name: 🚀 Use Node.js lts/*
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set node ${{ matrix.node }}
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: ${{ matrix.node }}
+          cache: pnpm
 
-      - name: 📦 Install Dependencies
-        run: pnpm i
-
-      - name: 🚧 Set up project
-        run: pnpm generate
-
-      - name: 🚧 Build
-        run: pnpm build
-
-      - name: 💪 Typecheck
-        run: pnpm typecheck
+      - run: pnpm i -g @antfu/ni
+      - run: nci
+      - run: nr build
+      - run: nr test

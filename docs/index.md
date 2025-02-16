@@ -1,0 +1,87 @@
+---
+layout: home
+title: "内容管理 - Cms.im"
+
+hero:
+  name: "内容管理"
+  text: 收集优秀的开源文档
+  tagline: 使用比较多的开源项目
+  actions:
+    - theme: brand
+      text: 介绍
+      link: /guide/
+    - theme: alt
+      text: Blog
+      link: https://dxh.me
+      target: _blank
+
+features:
+  - icon: <span class="i-logos:react"></span>
+    title: React
+    details: 用于构建 Web 和原生交互界面的库
+    link: https://react.cms.im
+  - icon: <span class="i-logos:vue"></span>
+    title: Vue
+    details: 构建用户界面的框架
+    link: https://vue.cms.im
+  - icon: <span class="i-logos:vitest"></span>
+    title: Vitest
+    details: 下一代测试框架
+    link: https://vitest.cms.im
+  - icon: <span class="i-logos:vitejs"></span>
+    title: Vite
+    details: 卓越的 Web 开发构建工具
+    link: https://vite.cms.im
+  - icon: <span class="i-logos:unocss"></span>
+    title: Unocss
+    details: 即时按需原子化CSS引擎
+    link: https://unocss.cms.im
+  - icon: <img w-8 h-8 src="https://vitepress.dev/vitepress-logo-mini.svg" />
+    title: Vitepress
+    details: 即时按需原子化CSS引擎
+    link: https://vitepress.cms.im
+  - icon: <img w-8 h-8 src="https://quickref.cms.im/icons/favicon.svg" />
+    title: Quick Reference
+    details: 快速参考备忘清单【速查表】
+    link: https://quickref.cms.im
+  - icon: <img w-8 h-8 src="https://component-party.cms.im/favicon.png" />
+    title: Component party
+    details: JavaScript框架语法特性对比
+    link: https://component-party.cms.im
+  - icon: <img w-8 h-8 src="https://tools.cms.im/favicon-32x32.png" />
+    title:  IT - TOOLS
+    details: 助力开发人员和 IT 工作者
+    link: https://tools.cms.im
+  - icon: <img w-8 h-8 src="https://hello-nav.cms.im/favicon/favicon-192.png" />
+    title: Hello Nav!
+    details: 面向开发人员的导航
+    link: https://hello-nav.cms.im
+  - icon: <span class="i-logos:github-icon"></span>
+    title: GitHub Users Global Ranking
+    details: GitHub用户全球排行榜
+    link: https://github-rank.cms.im/
+  - icon: <span class="i-carbon:code"></span>
+    title: code-image
+    details: 程序代码图片
+    link: https://code-image.cms.im/
+  - icon: <img w-8 h-8 src="https://tinypng.com/images/apple-touch-icon.png" />
+    title: TinyPNG
+    details: 压缩 AVIF、WebP、PNG 和 JPEG 图像
+    link: https://tinypng.com
+  - icon: <span class="i-carbon:play-filled" />
+    title: M3U8 Player
+    details: M3U8播放器
+    link: https://player.cms.im
+  - icon: <span class="i-carbon:chat-off" />
+    title: 批量删除微博博文
+    details: 批量删除新浪微博的小工具
+    link: https://github.com/dxhuii/delWeibo
+  - icon: <span class="i-carbon:connection-two-way" />
+    title: Simple to Traditional
+    details: 在线繁体字转换工具
+    link: https://www.cang.im/simple2traditional
+  - icon: <span class="i-carbon:color-palette" />
+    title: RGB转十六进制
+    details: RGB颜色值与十六进制颜色码转换工具
+    link: https://www.cang.im/rgb2hex
+---

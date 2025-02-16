@@ -3,41 +3,43 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@10.4.0",
   "engines": {
-    "node": "20.17.0"
+    "node": "22.14.0"
   },
   "scripts": {
-    "build": "nuxi build",
-    "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
-    "dev": "nuxi dev",
-    "generate": "nuxi generate",
-    "postinstall": "nuxi prepare",
-    "start": "node .output/server/index.mjs",
-    "start:generate": "npx serve .output/public",
-    "lint": "eslint .",
-    "typecheck": "vue-tsc --noEmit",
-    "release": "bumpp"
-  },
-  "dependencies": {
-    "chinese-simple2traditional": "^2.2.2"
+    "build": "nr -r build",
+    "dev": "nr -r dev",
+    "lint": "eslint --cache .",
+    "prepublishOnly": "nr build",
+    "docs": "pnpm -C docs run docs:dev",
+    "docs:build": "pnpm -C docs run docs:build",
+    "release": "bumpp -r && pnpm -r publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "3.8.0",
-    "@dxhuii/eslint-config": "^2.2.0",
-    "@iconify-json/carbon": "^1.2.3",
-    "@iconify-json/twemoji": "^1.2.1",
-    "@nuxtjs/color-mode": "^3.5.1",
-    "@pinia/nuxt": "^0.5.5",
-    "@unocss/eslint-config": "^0.63.4",
-    "@unocss/nuxt": "^0.63.4",
-    "@vite-pwa/nuxt": "^0.10.5",
-    "@vueuse/nuxt": "^11.1.0",
-    "bumpp": "^9.7.1",
-    "eslint": "^9.12.0",
-    "nuxt": "^3.13.2",
-    "pinia": "^2.2.4",
-    "typescript": "^5.6.3",
-    "vue-tsc": "^2.1.6"
+    "@antfu/eslint-config": "catalog:",
+    "@antfu/ni": "catalog:",
+    "@antfu/utils": "catalog:",
+    "@types/node": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "lint-staged": "catalog:",
+    "pkg-placeholder": "workspace:*",
+    "pnpm": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "unbuild": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

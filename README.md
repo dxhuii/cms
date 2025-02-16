@@ -1,7 +1,7 @@
-## 内容清单
+# cms
 
-- 收集一些好用的网站和工具
+文档中心
 
-## 使用 `vitesse-nuxt3` 搭建
+## License
 
-- [vitesse-nuxt3](https://github.com/antfu/vitesse-nuxt3)
+[MIT](./LICENSE) License © [Dxh.me](https://github.com/dxhuii)
