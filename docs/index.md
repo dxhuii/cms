@@ -68,7 +68,7 @@ features:
     title: TinyPNG
     details: 压缩 AVIF、WebP、PNG 和 JPEG 图像
     link: https://tinypng.com
-  - icon: <span class="i-carbon:play-filled" />
+  - icon: <img w-8 h-8 src="https://player.cms.im/img/favicon.svg" />
     title: M3U8 Player
     details: M3U8播放器
     link: https://player.cms.im
