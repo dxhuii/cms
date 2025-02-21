@@ -72,9 +72,9 @@ features:
     title: TinyPNG
     details: 压缩 AVIF、WebP、PNG 和 JPEG 图像
     link: https://tinypng.com
-  - icon: <img w-8 h-8 src="https://player.cms.im/img/favicon.svg" />
+  - icon: <img w-8 h-8 src="https://player.cms.im/static/img/favicon.svg" />
     title: M3U8 Player
-    details: M3U8播放器
+    details: 支持m3u8和mp4格式 | 多集连播 | 记忆播放 | 倍速播放
     link: https://player.cms.im
   - icon: <span class="i-carbon:chat-off" />
     title: 批量删除微博博文
