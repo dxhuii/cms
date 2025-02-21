@@ -36,6 +36,10 @@ features:
     title: Unocss
     details: 即时按需原子化CSS引擎
     link: https://unocss.cms.im
+  - icon: <span class="i-logos-tailwindcss-icon"></span>
+    title: Tailwindcss
+    details: 一个实用领先的CSS框架
+    link: https://tailwindcss.cms.im
   - icon: <img w-8 h-8 src="https://vitepress.dev/vitepress-logo-mini.svg" />
     title: Vitepress
     details: 即时按需原子化CSS引擎
