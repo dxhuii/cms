@@ -44,6 +44,10 @@ features:
     title: Vitepress
     details: 即时按需原子化CSS引擎
     link: https://vitepress.cms.im
+  - icon: <img w-8 h-8 src="https://onlinealarmclock.cms.im/logo.png" />
+    title: Online Alarm Clock
+    details: 在线闹钟
+    link: https://onlinealarmclock.cms.im
   - icon: <img w-8 h-8 src="https://quickref.cms.im/icons/favicon.svg" />
     title: Quick Reference
     details: 快速参考备忘清单【速查表】
