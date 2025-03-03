@@ -3,15 +3,18 @@ layout: home
 title: 内容管理系统 Content Management System
 
 hero:
-  name: 内容管理系统
-  text: 收集优秀的开源文档
-  tagline: 使用比较多的开源项目
   actions:
     - theme: brand
       text: 介绍
       link: /guide/
+    - theme: brand
+      text: RGB转十六进制
+      link: /rgb2hex/
+    - theme: brand
+      text: 简繁转换
+      link: /simple2traditional/
     - theme: alt
-      text: Blog
+      text: 博客
       link: https://dxh.me
       target: _blank
 
