@@ -55,10 +55,14 @@ features:
     title: Quick Reference
     details: 快速参考备忘清单【速查表】
     link: https://quickref.cms.im
-  - icon: <img w-8 h-8 src="https://component-party.cms.im/favicon.png" />
-    title: Component party
-    details: JavaScript框架语法特性对比
-    link: https://component-party.cms.im
+  - icon: <img w-8 h-8 src="https://quickref.cms.im/icons/favicon.svg" />
+    title: Quick Reference
+    details: 快速参考备忘清单【速查表】
+    link: https://quickref.cms.im
+  - icon: <img w-8 h-8 src="https://cropperjs.cms.im/logo.svg" />
+    title: Cropper.js
+    details: JavaScript 图片裁剪器。
+    link: https://cropperjs.cms.im
   - icon: <img w-8 h-8 src="https://tools.cms.im/favicon-32x32.png" />
     title:  IT - TOOLS
     details: 助力开发人员和 IT 工作者
