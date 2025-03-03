@@ -81,7 +81,7 @@ async function paste() {
   </main>
 </template>
 
-<style>
+<style scoped>
 .langs #toggle svg circle {
   transition: all 0.3s ease;
 }
