@@ -13,6 +13,7 @@
     "@shikijs/vitepress-twoslash": "catalog:",
     "@unocss/reset": "catalog:",
     "@vueuse/core": "catalog:",
+    "chinese-simple2traditional": "catalog:",
     "floating-vue": "catalog:",
     "pinia": "catalog:",
     "unocss": "catalog:",

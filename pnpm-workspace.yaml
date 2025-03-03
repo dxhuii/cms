@@ -14,6 +14,7 @@ catalog:
   '@types/node': ^22.13.4
   '@unocss/reset': ^65.5.0
   '@vueuse/core': ^12.7.0
+  chinese-simple2traditional: ^2.2.2
   bumpp: ^10.0.3
   eslint: ^9.20.1
   floating-vue: ^5.2.2

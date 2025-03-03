@@ -1,9 +1,9 @@
 ---
 layout: home
-title: "内容管理 - Cms.im"
+title: 内容管理系统 Content Management System
 
 hero:
-  name: "内容管理"
+  name: 内容管理系统
   text: 收集优秀的开源文档
   tagline: 使用比较多的开源项目
   actions:
@@ -87,9 +87,9 @@ features:
   - icon: <span class="i-carbon:connection-two-way" />
     title: Simple to Traditional
     details: 在线繁体字转换工具
-    link: https://www.cang.im/simple2traditional
+    link: /simple2traditional
   - icon: <span class="i-carbon:color-palette" />
     title: RGB转十六进制
     details: RGB颜色值与十六进制颜色码转换工具
-    link: https://www.cang.im/rgb2hex
+    link: /rgb2hex
 ---
