@@ -36,9 +36,10 @@ export default defineConfig({
     config: (md) => {
       md.use(groupIconMdPlugin)
     },
+    math: true,
   },
   cleanUrls: true,
-  vite,
+  vite: vite as any,
   themeConfig: {
     logo: '/favicon.svg',
     nav: [
@@ -58,10 +59,23 @@ export default defineConfig({
     sidebar: {
       '/': [
         {
-          text: 'Guide',
-          items: [],
+          text: '工具',
+          items: [
+            { text: 'BMI身体质量指数', link: '/bmi/' },
+            { text: 'RGB转16进制', link: '/rgb2hex/' },
+            { text: '简繁转换', link: '/simple2traditional/' },
+          ],
         },
       ],
+      // '/bmi/': [
+      //   {
+      //     text: '工具',
+      //     items: [
+      //       { text: 'BMI计算器', link: '/bmi/' },
+      //       { text: 'BMI标准对照表', link: '/bmi/#标准对照表' },
+      //     ],
+      //   },
+      // ],
     },
     editLink: {
       pattern: 'https://github.com/dxhuii/cms/edit/main/docs/:path',

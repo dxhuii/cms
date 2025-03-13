@@ -1,5 +1,5 @@
 ---
-title: 在线繁体字转换工具 - {{appName}}
+title: 在线繁体字转换工具
 description: 在线繁体字转换工具
 ---
 

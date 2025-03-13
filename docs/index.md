@@ -43,6 +43,10 @@ features:
     title: Tailwindcss
     details: 一个实用领先的CSS框架
     link: https://tailwindcss.cms.im
+  - icon: <span class="i-logos-hono"></span>
+    title: Hono
+    details: 轻量级、高性能的 Web 框架
+    link: https://hono.cms.im
   - icon: <img w-8 h-8 src="https://vitepress.dev/vitepress-logo-mini.svg" />
     title: Vitepress
     details: 即时按需原子化CSS引擎
@@ -51,10 +55,6 @@ features:
     title: Online Alarm Clock
     details: 在线闹钟
     link: https://onlinealarmclock.cms.im
-  - icon: <img w-8 h-8 src="https://quickref.cms.im/icons/favicon.svg" />
-    title: Quick Reference
-    details: 快速参考备忘清单【速查表】
-    link: https://quickref.cms.im
   - icon: <img w-8 h-8 src="https://quickref.cms.im/icons/favicon.svg" />
     title: Quick Reference
     details: 快速参考备忘清单【速查表】
@@ -87,10 +87,18 @@ features:
     title: M3U8 Player
     details: 支持m3u8和mp4格式 | 多集连播 | 记忆播放 | 倍速播放
     link: https://player.cms.im
+  - icon: <img w-8 h-8 src="https://www.olpuzzle.com/logo.png" />
+    title: 免费在线拼图网站
+    details: 免费在线拼图游戏，放松身心的休闲娱乐
+    link: https://www.olpuzzle.com
   - icon: <span class="i-carbon:chat-off" />
     title: 批量删除微博博文
     details: 批量删除新浪微博的小工具
     link: https://github.com/dxhuii/delWeibo
+  - icon: <span class="i-carbon:scale" />
+    title: BMI身体质量指数
+    details: 身体质量指数计算器与标准对照表
+    link: /bmi
   - icon: <span class="i-carbon:connection-two-way" />
     title: Simple to Traditional
     details: 在线繁体字转换工具
