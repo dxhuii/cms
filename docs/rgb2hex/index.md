@@ -87,7 +87,7 @@ import { appName } from '../constants'
 | <div style="width:40px;height:20px;background-color:#98fb98"></div> | PaleGreen | 苍白的绿色 | #98FB98 | 152,251,152 |
 | <div style="width:40px;height:20px;background-color:#8fbc8f"></div> | DarkSeaGreen | 深海洋绿 | #8FBC8F | 143,188,143 |
 | <div style="width:40px;height:20px;background-color:#006400"></div> | DarkGreen | 深绿色 | #006400 | 0,100,0 |
-| <div style="width:40px;height:20px;background-color:#f5f5dc></div> | Beige | 米色(浅褐色) | #F5F5DC | 245,245,220 |
+| <div style="width:40px;height:20px;background-color:#f5f5dc"></div> | Beige | 米色(浅褐色) | #F5F5DC | 245,245,220 |
 | <div style="width:40px;height:20px;background-color:#fafad2"></div> | LightGoldenrodYellow | 浅秋麒麟黄 | #FAFAD2 | 250,250,210 |
 | <div style="width:40px;height:20px;background-color:#32cd32"></div> | LimeGreen | 酸橙绿 | #32CD32 | 50,205,50 |
 | <div style="width:40px;height:20px;background-color:#00ff00"></div> | Lime | 酸橙色 | #00FF00 | 0,255,0 |
