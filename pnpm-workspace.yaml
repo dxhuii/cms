@@ -5,7 +5,6 @@ packages:
 catalog:
   '@antfu/ni': ^27.0.0
   '@antfu/utils': ^9.3.0
-  '@dxhuii/eslint-config': ^2.2.0
   '@iconify-json/carbon': ^1.2.14
   '@iconify-json/logos': ^1.2.9
   '@iconify-json/svg-spinners': ^1.2.4
@@ -15,7 +14,6 @@ catalog:
   '@vueuse/core': ^14.0.0
   bumpp: ^10.3.1
   chinese-simple2traditional: ^2.2.2
-  eslint: ^9.38.0
   floating-vue: ^5.2.2
   lint-staged: ^16.2.6
   markdown-it-mathjax3: ^5.2.0

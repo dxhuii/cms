@@ -10,7 +10,7 @@
   "scripts": {
     "build": "nr -r build",
     "dev": "nr -r dev",
-    "lint": "oxfmt && oxlint --type-aware .",
+    "lint": "oxfmt --no-error-on-unmatched-pattern && oxlint --type-aware .",
     "prepublishOnly": "nr build",
     "docs": "pnpm -C docs run docs:dev",
     "docs:build": "pnpm -C docs run docs:build",
@@ -18,7 +18,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks",
-    "lint:fix": "oxfmt && oxlint --type-aware --fix"
+    "lint:fix": "oxfmt --no-error-on-unmatched-pattern && oxlint --type-aware --fix"
   },
   "devDependencies": {
     "oxfmt": "catalog:",
@@ -26,10 +26,8 @@
     "oxlint-tsgolint": "catalog:",
     "@antfu/ni": "catalog:",
     "@antfu/utils": "catalog:",
-    "@dxhuii/eslint-config": "catalog:",
     "@types/node": "catalog:",
     "bumpp": "catalog:",
-    "eslint": "catalog:",
     "lint-staged": "catalog:",
     "markdown-it-mathjax3": "catalog:",
     "pkg-placeholder": "workspace:*",
@@ -46,8 +44,8 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": [
-      "oxfmt",
+    "*.{js,jsx,ts,tsx,vue,json}": [
+      "oxfmt --no-error-on-unmatched-pattern",
       "oxlint --type-aware --fix"
     ]
   }
