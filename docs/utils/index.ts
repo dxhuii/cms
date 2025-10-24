@@ -1,13 +1,13 @@
-import { ref } from 'vue'
+import { ref } from "vue";
 
-export const isCopy = ref(false)
+export const isCopy = ref(false);
 
-export function copy(text: string): void {
+export async function copy(text: string): Promise<void> {
   if (navigator.clipboard) {
     // clipboard api 复制
-    navigator.clipboard.writeText(text)
+    await navigator.clipboard.writeText(text);
   }
 
-  isCopy.value = true
-  setTimeout(() => isCopy.value = false, 1000)
+  isCopy.value = true;
+  setTimeout(() => (isCopy.value = false), 1000);
 }

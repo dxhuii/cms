@@ -10,17 +10,20 @@
   "scripts": {
     "build": "nr -r build",
     "dev": "nr -r dev",
-    "lint": "eslint --cache .",
+    "lint": "oxfmt && oxlint --type-aware .",
     "prepublishOnly": "nr build",
     "docs": "pnpm -C docs run docs:dev",
     "docs:build": "pnpm -C docs run docs:build",
     "release": "bumpp -r && pnpm -r publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "lint:fix": "oxfmt && oxlint --type-aware --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
     "@antfu/ni": "catalog:",
     "@antfu/utils": "catalog:",
     "@dxhuii/eslint-config": "catalog:",
@@ -43,6 +46,9 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*": [
+      "oxfmt",
+      "oxlint --type-aware --fix"
+    ]
   }
 }
