@@ -63,6 +63,9 @@ catalogs:
     pnpm:
       specifier: ^10.19.0
       version: 10.19.0
+    sass-embedded:
+      specifier: ^1.93.2
+      version: 1.93.2
     simple-git-hooks:
       specifier: ^2.13.1
       version: 2.13.1
@@ -138,7 +141,7 @@ importers:
         specifier: 'catalog:'
         version: 10.19.0
       sass-embedded:
-        specifier: ^1.93.2
+        specifier: 'catalog:'
         version: 1.93.2
       simple-git-hooks:
         specifier: 'catalog:'
