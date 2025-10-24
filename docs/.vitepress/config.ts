@@ -7,19 +7,24 @@ import { appDescription, appName } from '../constants'
 import vite from './vite.config'
 
 const VUE: DefaultTheme.NavItemWithLink[] = [
-  { text: 'English', link: 'https://vue.cms.im' },
-  { text: '简体中文', link: 'https://cn.vue.cms.im' },
-  { text: 'Vite', link: 'https://vite.cms.im' },
-  { text: 'Vitest', link: 'https://vitest.cms.im' },
-  { text: 'Vitepress', link: 'https://vitepress.cms.im' },
+  { text: 'English', link: 'https://vuejs.org' },
+  { text: '简体中文', link: 'https://cn.vuejs.org' },
+  { text: 'Vite', link: 'https://vite.dev' },
+  { text: 'Vitest', link: 'https://vitest.dev' },
+  { text: 'Vitepress', link: 'https://vitepress.dev' },
+  { text: 'Nuxt', link: 'https://nuxt.com' },
 ]
 
 const REACT: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
-  { text: 'English', link: 'https://react.cms.im' },
-  { text: '简体中文', link: 'https://zh-hans-react.cms.im' },
+  { text: 'English', link: 'https://react.dev' },
+  { text: '简体中文', link: 'https://zh-hans.react.dev' },
+  { text: 'React Native', link: 'https://reactnative.dev' },
+  { text: 'Next.js', link: 'https://nextjs.org' },
+  { text: 'React Router', link: 'https://reactrouter.com' },
+  { text: 'React Query', link: 'https://react-query.tanstack.com' },
 ]
 
-const title = '内容管理系统'
+const title = '内容收集'
 
 export default defineConfig({
   title,
@@ -86,18 +91,18 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/dxhuii/cms' },
+      { icon: 'github', link: 'https://github.com/dxhuii' },
     ],
 
     footer: {
-      message: `内容管理 - cms.im v${version}`,
+      message: `内容收集 - cms.im v${version}`,
       copyright: 'Copyright © 2025-PRESENT Dxh.me',
     },
   },
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-    ['meta', { name: 'author', content: 'Dxh' }],
+    ['meta', { name: 'author', content: 'Dxh.me' }],
     ['meta', { property: 'og:title', content: appName }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: '/favicon.svg' }],

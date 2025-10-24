@@ -1,11 +1,11 @@
 {
   "name": "cms",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "private": true,
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.19.0",
   "engines": {
-    "node": "22.14.0"
+    "node": "22.20.0"
   },
   "scripts": {
     "build": "nr -r build",
@@ -23,14 +23,15 @@
     "@antfu/eslint-config": "catalog:",
     "@antfu/ni": "catalog:",
     "@antfu/utils": "catalog:",
+    "@dxhuii/eslint-config": "catalog:",
     "@types/node": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",
     "lint-staged": "catalog:",
-    "markdown-it-mathjax3": "^4.3.2",
+    "markdown-it-mathjax3": "catalog:",
     "pkg-placeholder": "workspace:*",
     "pnpm": "catalog:",
-    "sass-embedded": "^1.85.1",
+    "sass-embedded": "catalog:",
     "simple-git-hooks": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:",
