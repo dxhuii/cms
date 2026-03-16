@@ -191,5 +191,16 @@ const exampleText = `物品类别: 腰带
     <div mt-6 text-xs text="gray-500 dark:gray-400">
       提示：输入流放之路装备词条后点击翻译按钮，即可在右侧查看英文译文。点击复制按钮可复制译文到剪贴板。
     </div>
+
+    <div mt-4 text-xs text="gray-500 dark:gray-400">
+      特别感谢：本工具使用了
+      <a
+        href="https://github.com/cn-poe-community/cn-poe-utils"
+        target="_blank"
+        class="text-blue-500 hover:underline"
+        >cn-poe-community/cn-poe-utils</a
+      >
+      库提供的翻译功能。
+    </div>
   </main>
 </template>
