@@ -1,12 +1,8 @@
 {
   "name": "cms",
-  "type": "module",
   "version": "0.0.2",
   "private": true,
-  "packageManager": "pnpm@10.19.0",
-  "engines": {
-    "node": "22.20.0"
-  },
+  "type": "module",
   "scripts": {
     "build": "nr -r build",
     "dev": "nr -r dev",
@@ -20,16 +16,19 @@
     "prepare": "simple-git-hooks",
     "lint:fix": "oxfmt --no-error-on-unmatched-pattern && oxlint --type-aware --fix"
   },
+  "dependencies": {
+    "cn-poe-utils": "catalog:"
+  },
   "devDependencies": {
-    "oxfmt": "catalog:",
-    "oxlint": "catalog:",
-    "oxlint-tsgolint": "catalog:",
     "@antfu/ni": "catalog:",
     "@antfu/utils": "catalog:",
     "@types/node": "catalog:",
     "bumpp": "catalog:",
     "lint-staged": "catalog:",
     "markdown-it-mathjax3": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
     "pkg-placeholder": "workspace:*",
     "pnpm": "catalog:",
     "sass-embedded": "catalog:",
@@ -48,5 +47,9 @@
       "oxfmt --no-error-on-unmatched-pattern",
       "oxlint --type-aware --fix"
     ]
-  }
+  },
+  "engines": {
+    "node": "24.14.0"
+  },
+  "packageManager": "pnpm@10.30.2"
 }

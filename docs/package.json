@@ -1,6 +1,6 @@
 {
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
@@ -14,6 +14,7 @@
     "@unocss/reset": "catalog:",
     "@vueuse/core": "catalog:",
     "chinese-simple2traditional": "catalog:",
+    "cn-poe-utils": "catalog:",
     "floating-vue": "catalog:",
     "pinia": "catalog:",
     "unocss": "catalog:",

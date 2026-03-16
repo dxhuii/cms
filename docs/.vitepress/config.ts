@@ -1,14 +1,16 @@
-import { version } from "../../package.json";
-import { appDescription, appName } from "../constants";
-import vite from "./vite.config";
 import { transformerTwoslash } from "@shikijs/vitepress-twoslash";
 import type { DefaultTheme } from "vitepress";
 import { defineConfig } from "vitepress";
 import { groupIconMdPlugin } from "vitepress-plugin-group-icons";
 
+import { version } from "../../package.json";
+import { appDescription, appName } from "../constants";
+import vite from "./vite.config";
+
 const VUE: DefaultTheme.NavItemWithLink[] = [
   { text: "English", link: "https://vuejs.org" },
   { text: "简体中文", link: "https://cn.vuejs.org" },
+  { text: "VoidZero", link: "https://voidzero.dev/" },
   { text: "Vite", link: "https://vite.dev" },
   { text: "Vitest", link: "https://vitest.dev" },
   { text: "Vitepress", link: "https://vitepress.dev" },
@@ -67,6 +69,7 @@ export default defineConfig({
             { text: "BMI身体质量指数", link: "/bmi/" },
             { text: "RGB转16进制", link: "/rgb2hex/" },
             { text: "简繁转换", link: "/simple2traditional/" },
+            { text: "流放之路装备翻译", link: "/poe-translator/" },
           ],
         },
       ],

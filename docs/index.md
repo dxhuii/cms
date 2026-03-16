@@ -4,8 +4,8 @@ title: 内容收集
 
 hero:
   name: 内容收集
-  text: 收集开源项目和文档
-  tagline: 好的开源项目和文档，方便查找。
+  text: 收集开源项目和工具
+  tagline: 好的开源项目和工具，方便查找。
   image:
     src: /favicon.svg
   actions:
@@ -36,6 +36,22 @@ features:
     title: RGB转十六进制
     details: RGB颜色值与十六进制颜色码转换工具
     link: /rgb2hex
+  - icon: <span class="i-carbon:translate" />
+    title: 流放之路装备翻译
+    details: 流放之路装备词条中译英工具
+    link: /poe-translator
+  - icon: <img w-8 h-8 src="https://www.olpuzzle.com/logo.png" />
+    title: 免费在线拼图网站
+    details: 免费在线拼图游戏，放松身心的休闲娱乐
+    link: https://www.olpuzzle.com
+  - icon: <img w-8 h-8 src="https://player.cms.im/static/img/favicon.svg" />
+    title: M3U8 Player
+    details: 支持m3u8和mp4格式 | 多集连播 | 记忆播放 | 倍速播放
+    link: https://player.cms.im
+  - icon: <img w-8 h-8 src="https://onlinealarmclock.cms.im/logo.png" />
+    title: Online Alarm Clock
+    details: 在线闹钟
+    link: https://onlinealarmclock.cms.im
   - icon: <span class="i-logos:react"></span>
     title: React
     details: 用于构建 Web 和原生交互界面的库
@@ -68,15 +84,11 @@ features:
     title: Vitepress
     details: 即时按需原子化CSS引擎
     link: https://vitepress.dev
-  - icon: <img w-8 h-8 src="https://onlinealarmclock.cms.im/logo.png" />
-    title: Online Alarm Clock
-    details: 在线闹钟
-    link: https://onlinealarmclock.cms.im
   - icon: <img w-8 h-8 src="https://quickref.cms.im/icons/favicon.svg" />
     title: Quick Reference
     details: 快速参考备忘清单【速查表】
     link: https://quickref.cms.im
-  - icon: <img w-8 h-8 src="https://cropperjs.cms.im/logo.svg" />
+  - icon: <img w-8 h-8 src="https://fengyuanchen.github.io/cropperjs/logo.svg" />
     title: Cropper.js
     details: JavaScript 图片裁剪器。
     link: https://fengyuanchen.github.io/cropperjs/
@@ -100,14 +112,6 @@ features:
     title: TinyPNG
     details: 压缩 AVIF、WebP、PNG 和 JPEG 图像
     link: https://tinypng.com
-  - icon: <img w-8 h-8 src="https://player.cms.im/static/img/favicon.svg" />
-    title: M3U8 Player
-    details: 支持m3u8和mp4格式 | 多集连播 | 记忆播放 | 倍速播放
-    link: https://player.cms.im
-  - icon: <img w-8 h-8 src="https://www.olpuzzle.com/logo.png" />
-    title: 免费在线拼图网站
-    details: 免费在线拼图游戏，放松身心的休闲娱乐
-    link: https://www.olpuzzle.com
   - icon: <span class="i-carbon:chat-off" />
     title: 批量删除微博博文
     details: 批量删除新浪微博的小工具
