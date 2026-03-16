@@ -28,20 +28,6 @@ function copyToClipboard() {
 }
 
 
-function pasteFromClipboard() {
-  navigator.clipboard
-    .readText()
-    .then((text) => {
-      originalText.value = text;
-      hasUserInput.value = true;
-      translate();
-    })
-    .catch((err) => {
-      console.error("无法读取剪贴板内容:", err);
-    });
-}
-
-
 // 监听输入变化
 watch(originalText, (newValue) => {
   if (newValue && !hasUserInput.value) {
@@ -77,9 +63,9 @@ const exampleText = `物品类别: 腰带
 忆境物品`;
 
 
-// 初始化翻译
-originalText.value = exampleText;
-translate();
+// 初始化翻译 - 默认不加载示例
+// originalText.value = exampleText;
+// translate();
 </script>
 
 <template>
@@ -105,50 +91,32 @@ translate();
       <div w-full bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm>
         <div flex items-center justify-between mb-4>
           <h3 text="lg gray-700 dark:gray-200" font-medium>原文（中文）</h3>
-          <div flex gap-2>
-            <button
-              bg-gray-200
-              hover:bg-gray-300
-              text-gray-800
-              dark:bg-gray-700
-              dark:hover:bg-gray-600
-              dark:text-gray-200
-              px-3
-              py-1
-              rounded
-              text-sm
-              transition-colors
-              @click="pasteFromClipboard"
-            >
-              粘贴
-            </button>
-            <button
-              v-if="originalText"
-              bg-gray-200
-              hover:bg-gray-300
-              text-gray-800
-              dark:bg-gray-700
-              dark:hover:bg-gray-600
-              dark:text-gray-200
-              px-3
-              py-1
-              rounded
-              text-sm
-              transition-colors
-              @click="
-                originalText = '';
-                translatedText = '';
-                hasUserInput = false;
-              "
-            >
-              清空
-            </button>
-          </div>
+          <button
+            v-if="originalText"
+            bg-gray-200
+            hover:bg-gray-300
+            text-gray-800
+            dark:bg-gray-700
+            dark:hover:bg-gray-600
+            dark:text-gray-200
+            px-3
+            py-1
+            rounded
+            text-sm
+            transition-colors
+            @click="
+              originalText = '';
+              translatedText = '';
+              hasUserInput = false;
+            "
+          >
+            清空
+          </button>
         </div>
         <textarea
           v-model="originalText"
           class="w-full h-80 rounded border border-gray-400 bg-gray-50 text-gray-800 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 px-3 py-2 focus:(ring-2 ring-blue-300 outline-none) resize-y"
-          placeholder="请输入流放之路装备词条..."
+          placeholder="请输入流放之路装备词条，或使用快捷键 Ctrl+V 粘贴..."
         ></textarea>
         <div mt-4 flex justify-end gap-3>
           <button
