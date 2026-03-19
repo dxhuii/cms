@@ -117,13 +117,5 @@ export default defineConfig({
         content: "width=device-width, initial-scale=1.0, viewport-fit=cover",
       },
     ],
-    [
-      "script",
-      {
-        src: "https://d.vv.chat/script.js",
-        defer: "true",
-        "data-website-id": "691ab4f0-9191-40bb-8b3c-da5d2ffb3ab1",
-      },
-    ],
   ],
 });
